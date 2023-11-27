@@ -4,7 +4,7 @@ package com.Serenity.steps;
  * Copyright 2023 SQA. Todos los derechos reservados.
  */
 
-import com.Serenity.pageObject.ProfilePage;
+import com.Serenity.pageObject.ValidatePage;
 import net.thucydides.core.annotations.Step;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Assert;
@@ -16,11 +16,11 @@ import java.time.Duration;
  * @autor Rafael Chica
  * @Fecha: --o--
  */
-public class ProfileSteps {
+public class ValidateSteps {
     @Page
-    ProfilePage profilePage;
+    ValidatePage profilePage;
 
-    @Step("Validacion del boton de perfil")
+    @Step("Validacion login ")
     public void valedateProfile(){
 
         Assert.assertTrue(
@@ -31,7 +31,7 @@ public class ProfileSteps {
 
     @Step("Validacion de los cambios")
     public void cambios(){
-        WebDriverWait wait = new WebDriverWait(profilePage.getDriver(), Duration.ofSeconds(5)); // Espera de hasta 5 segundos
+        WebDriverWait wait = new WebDriverWait(profilePage.getDriver(), Duration.ofSeconds(2));
 
         // Esperar a que el elemento sea visible
         wait.until(ExpectedConditions.visibilityOfElementLocated(profilePage.getDivProfile()));

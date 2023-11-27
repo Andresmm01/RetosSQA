@@ -2,7 +2,8 @@ package com.Serenity.stepDefinitions;
 
 import com.Serenity.steps.ChangeSteps;
 import com.Serenity.steps.LoginSteps;
-import com.Serenity.steps.ProfileSteps;
+import com.Serenity.steps.ValidateSteps;
+import com.Serenity.steps.WebSteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,7 +18,10 @@ public class ChangeNameStepDef {
     LoginSteps loginSteps;
 
     @Steps
-    ProfileSteps profileSteps;
+    ValidateSteps validateSteps;
+
+    @Steps
+    WebSteps webSteps;
 
 
     @Given("User opens the browser")
@@ -38,18 +42,18 @@ public class ChangeNameStepDef {
     @When("The user selects a specific order")
     public void theUserSelectsASpecificOrder() {
         changeSteps.OpenOrder();
-        changeSteps.Order();
+        webSteps.Order();
     }
     @When("Selects a new employee for the order")
     public void selectsANewEmployeeForTheOrder() {
         changeSteps.Emple();
-        changeSteps.Emplo();
+        webSteps.Emplo();
     }
     @When("Applies the changes")
     public void appliesTheChanges() {
         changeSteps.Save();
         changeSteps.Exi();
-        profileSteps.cambios();
+        validateSteps.cambios();
 
     }
     @Then("The changes are validated")

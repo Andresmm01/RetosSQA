@@ -6,7 +6,7 @@ package com.Serenity.stepDefinitions;
 
 
 import com.Serenity.steps.LoginSteps;
-import com.Serenity.steps.ProfileSteps;
+import com.Serenity.steps.ValidateSteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +22,7 @@ public class LoginSerenityStepDef {
     LoginSteps loginSteps;
 
     @Steps
-    ProfileSteps profileSteps;
+    ValidateSteps validateSteps;
 
     @Given("User open the browser")
     public void userOpenTheBrowser() {
@@ -35,11 +35,12 @@ public class LoginSerenityStepDef {
         loginSteps.clear();
         loginSteps.sendCredencials();
         loginSteps.clickLogin();
+        validateSteps.valedateProfile();
 
     }
     @Then("User successfully accesses their profile")
     public void userSuccessfullyAccessesTheirProfile() {
-        profileSteps.valedateProfile();
+
 
     }
 
