@@ -17,8 +17,6 @@ public class ChangePage extends PageObject {
 
     private final By btnSave =By.xpath("//div[@class='tool-button apply-changes-button icon-tool-button']");
 
-    private final By btnExi =By.xpath("//div[@class='tool-button save-and-close-button icon-tool-button']");
-
 
     public By getBtnOpenOrder() {
         return btnOpenOrder;
@@ -32,7 +30,5 @@ public class ChangePage extends PageObject {
         return btnSave;
     }
 
-    public By getBtnExi() {
-        return btnExi;
-    }
+
 }

@@ -32,11 +32,6 @@ public class ChangeSteps {
                 .click();
     }
 
-    @Step ("Click en guardar con exito")
-    public void Exi() {
-        changePage.getDriver().findElement(changePage.getBtnExi())
-                .click();
 
-    }
 
 }

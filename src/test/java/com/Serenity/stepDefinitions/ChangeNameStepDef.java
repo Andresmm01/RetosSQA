@@ -52,13 +52,13 @@ public class ChangeNameStepDef {
     @When("Applies the changes")
     public void appliesTheChanges() {
         changeSteps.Save();
-        changeSteps.Exi();
-        validateSteps.cambios();
+
+
 
     }
     @Then("The changes are validated")
     public void theChangesAreValidated() {
-
+        validateSteps.Cambios();
 
 
     }
