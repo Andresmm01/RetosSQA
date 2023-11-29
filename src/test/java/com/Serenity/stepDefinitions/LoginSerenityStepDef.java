@@ -30,17 +30,17 @@ public class LoginSerenityStepDef {
 
 
     }
-    @When("User insert credentials {string} {string} and click on login")
-    public void userInsertCredentialsAndClickOnLogin(String user, String pssw) {
+    @When("User insert credentials and click on login")
+    public void userInsertCredentialsAndClickOnLogin() {
         loginSteps.clear();
         loginSteps.sendCredencials();
         loginSteps.clickLogin();
-        validateSteps.valedateProfile();
+
 
     }
     @Then("User successfully accesses their profile")
     public void userSuccessfullyAccessesTheirProfile() {
-
+    validateSteps.valedateProfile();
 
     }
 
